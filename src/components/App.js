@@ -1,12 +1,17 @@
+// @ts-nocheck
 import React from 'react';
 import { MantineProvider, Container, theming } from '@mantine/core';
+import { Router, Redirect } from '@reach/router';
 import { createUseStyles } from 'react-jss';
+import Categories from './Categories';
+import './Categories.css';
+import CategoryMeals from './CategoryMeals';
 
 const useStyles = createUseStyles(
   () => ({
     '@global': {
       body: {
-        backgroundColor: '#f1f3f5',
+        backgroundColor: '#D8D8DD',
       },
     },
   }),
@@ -21,10 +26,12 @@ function App() {
         lineHeight: 1.2,
       }}
     >
-      <Container>
-        <div>
-          Hello There
-        </div>
+      <Container size={1200} padding={0}>
+        <Router>
+          <Redirect noThrow from="/" to="/categories" />
+          <Categories path="/categories" />
+          <CategoryMeals path="/categories/:strCategory" />
+        </Router>
       </Container>
     </MantineProvider>
   );
