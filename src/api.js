@@ -6,4 +6,10 @@ const getCategories = async () => {
   return data.data;
 };
 
-export default getCategories;
+const getMeals = async (categoryName) => {
+  const data = await axios.get(`/filter.php?c=${categoryName}`).then((res) => res);
+
+  return data.data;
+};
+
+export { getCategories, getMeals };
