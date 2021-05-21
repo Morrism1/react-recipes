@@ -6,7 +6,7 @@ import thunk from 'redux-thunk';
 import './index.css';
 import App from './components/App';
 import reducer from './reducer';
-import { loadCategories } from './actions';
+import { loadCategories, loadMealDetails } from './actions';
 
 const composeEnhancers = typeof window === 'object'
   // @ts-ignore
@@ -19,6 +19,7 @@ const composeEnhancers = typeof window === 'object'
 
 const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 store.dispatch(loadCategories());
+store.dispatch(loadMealDetails());
 
 ReactDOM.render(
   <Provider store={store}>
