@@ -12,4 +12,10 @@ const getMeals = async (categoryName) => {
   return data.data;
 };
 
-export { getCategories, getMeals };
+const getMealData = async (idMeal) => {
+  const data = await axios.get(`/lookup.php?i=${idMeal}`).then((res) => res);
+
+  return data.data;
+};
+
+export { getCategories, getMeals, getMealData };
