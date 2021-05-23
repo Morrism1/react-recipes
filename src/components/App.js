@@ -1,17 +1,19 @@
 // @ts-nocheck
 import React from 'react';
 import { MantineProvider, Container, theming } from '@mantine/core';
-import { Router, Redirect } from '@reach/router';
+import { Router, Redirect, LocationProvider } from '@reach/router';
 import { createUseStyles } from 'react-jss';
 import Categories from './Categories';
 import './Categories.css';
 import CategoryMeals from './CategoryMeals';
+import MealData from './MealData';
+import Navbar from './Navbar';
 
 const useStyles = createUseStyles(
   () => ({
     '@global': {
       body: {
-        backgroundColor: '#D8D8DD',
+        backgroundColor: '#fefefe',
       },
     },
   }),
@@ -27,10 +29,15 @@ function App() {
       }}
     >
       <Container size={1200} padding={0}>
+        <LocationProvider>
+          <Navbar />
+        </LocationProvider>
+
         <Router>
-          <Redirect noThrow from="/" to="/categories" />
-          <Categories path="/categories" />
+          <Redirect noThrow from="/" to="/home" />
+          <Categories path="/home" />
           <CategoryMeals path="/categories/:strCategory" />
+          <MealData path="/meals/:idMeal" />
         </Router>
       </Container>
     </MantineProvider>
