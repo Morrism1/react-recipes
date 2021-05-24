@@ -34,9 +34,9 @@ function CategoryMeals({
     <div className="mt-4">
       <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {meals.map((meal) => (
-          <li key={meal.idMeal}>
+          <li key={meal.idMeal} className="card--shadow">
             <Link to={`/meals/${meal.idMeal}`}>
-              <Card className="card--shadow">
+              <Card>
                 <Image
                   src={meal.strMealThumb}
                   height={160}
