@@ -1,7 +1,7 @@
 # RECIPE
 
 This project is a Meals Recipes, developed using React and Redux.
-Using the Mealsdb Api for the Data.
+Using the Mealsdb Api for the Data. A catalogue of Recipes.
 
 ![screely-1621903179384](https://user-images.githubusercontent.com/46853433/119422988-87bfa480-bd02-11eb-9961-614dac4c4cfb.png)
 
