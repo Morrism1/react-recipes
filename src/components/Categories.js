@@ -27,7 +27,7 @@ const responsive = {
 };
 
 function Categories({ categories, loading }) {
-  const randomNumber = Math.floor(Math.random() * 10) + 1;
+  const randomNumber = 0;
   if (loading) {
     return (
       <Loading />
