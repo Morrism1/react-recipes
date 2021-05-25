@@ -16,7 +16,7 @@ export const CHANGE_FILTER = 'CHANGE_FILTER';
 
 export const loadCategories = () => (dispatch) => {
   dispatch({ type: LOAD_CATEGORIES_BEGIN });
-  getCategories()
+  return getCategories()
     .then((categories) => {
       dispatch({ type: LOAD_CATEGORIES_SUCCESS, payload: categories });
     })
