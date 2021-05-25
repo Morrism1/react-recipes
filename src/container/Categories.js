@@ -5,7 +5,7 @@ import { Spoiler } from '@mantine/core';
 import Carousel from 'react-multi-carousel';
 import { Link } from '@reach/router';
 import 'react-multi-carousel/lib/styles.css';
-import Loading from './Loading';
+import Loading from '../components/Loading';
 
 const responsive = {
   superLargeDesktop: {

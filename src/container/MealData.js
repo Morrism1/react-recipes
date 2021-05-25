@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { useEffect } from 'react';
 import { loadMealDetails } from '../actions/index';
-import Loading from './Loading';
-import NotFoundPage from './NotFound';
+import Loading from '../components/Loading';
+import NotFoundPage from '../components/NotFound';
 
 function MealData({
   mealData, meal, loading, loadMealDetails,

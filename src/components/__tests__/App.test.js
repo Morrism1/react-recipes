@@ -3,7 +3,7 @@ import React from 'react';
 import { cleanup } from '@testing-library/react';
 import { render } from '../../test-utils';
 import '@testing-library/jest-dom/extend-expect';
-import App from '../App';
+import App from '../../container/App';
 
 afterEach(cleanup);
 
