@@ -18,26 +18,11 @@ Using the Mealsdb Api for the Data.
 
 [Live demo](https://relaxed-johnson-622b53.netlify.app/)
 
-## Getting Started
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles app in production mode and optimizes the build for the best performance.
-
 ### `Prerequisites`
 
 To get this project up and running locally, "yarn install" is needed to be run in order to include all dependencies used for this project.
+
+## Getting Started
 
 **To get this project set up on your local machine, follow these simple steps:**
 
@@ -48,6 +33,10 @@ To get this project up and running locally, "yarn install" is needed to be run i
 5. Run "npm install".
 6. Run "npm start".
 7. Open, in your browser, 'localhost:3000'.
+
+## Test
+
+- `npm run test`
 
 ## ✒️ Author
 
