@@ -25,8 +25,8 @@ function MealData({
     <section>
       {mealData.map((meal, i) => (
         i === 0 ? (
-          <div className="relative">
-            <div className="flex flex-col md:flex-row border-2 border-opacity-30 border-gray-700 rounded-xl justify-between max-w-screen-xl mx-auto py-20 px-5 md:py-24 items-center" key={meal.idMeal}>
+          <div className="relative mb-4" key={meal.idMeal}>
+            <div className="flex flex-col md:flex-row border-2 border-opacity-30 border-gray-700 rounded-xl justify-between max-w-screen-xl mx-auto py-20 px-5 md:py-12 items-center">
               <div className="md:w-6/12 flex-shrink-0 relative">
                 <img alt="" src={meal.strMealThumb} className="rounded-xl" />
               </div>
@@ -132,13 +132,12 @@ function MealData({
 MealData.defaultProps = {
   mealData: [],
   meal: [],
-  loading: '',
 };
 
 MealData.propTypes = {
   mealData: PropTypes.arrayOf(PropTypes.object),
-  meal: PropTypes.arrayOf(PropTypes.object),
-  loading: PropTypes.string,
+  meal: PropTypes.objectOf(PropTypes.string),
+  loading: PropTypes.bool.isRequired,
   loadMealDetails: PropTypes.func.isRequired,
 };
 
