@@ -1,6 +1,6 @@
 import React from 'react';
-import { cleanup } from '@testing-library/react';
-import { render, screen } from '../../test-utils';
+import { cleanup, screen } from '@testing-library/react';
+import { render } from '../../test-utils';
 import '@testing-library/jest-dom/extend-expect';
 import Categories from '../Categories';
 
