@@ -1,0 +1,6 @@
+.card {
+  backdrop-filter: saturate(380%) blur(20px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
