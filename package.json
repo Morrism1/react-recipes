@@ -64,10 +64,11 @@
     "eslint-plugin-react": "7.x",
     "eslint-plugin-react-hooks": "4.x",
     "postcss": "^7",
-    "stylelint": "13.x",
-    "stylelint-config-standard": "21.x",
-    "stylelint-csstree-validator": "1.x",
-    "stylelint-scss": "3.x",
+    "stylelint": "13.3.x",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-config-standard": "20.0.x",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "3.17.x",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }
