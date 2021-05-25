@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import PropTypes from 'prop-types';
 import { Popover } from '@headlessui/react';
 import { connect } from 'react-redux';
@@ -26,7 +24,7 @@ function Navbar({ filter }) {
           'sticky top-0 z-50 backdrop-blur-3xl backdrop-brightness-50 bg-white bg-opacity-80 shadow-sm lg:static lg:overflow-y-visible py-4',
         )}
       >
-        {({ open }) => (
+        {() => (
           <>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="relative flex justify-between xl:grid xl:grid-cols-12 lg:gap-8">
@@ -45,9 +43,6 @@ function Navbar({ filter }) {
                   {location.href.includes('/categories/') && (
                     <div className="flex items-center px-6 py-4 md:max-w-3xl md:mx-auto lg:max-w-none lg:mx-0 xl:px-0">
                       <div className="w-full">
-                        <label htmlFor="search" className="sr-only">
-                          Filter
-                        </label>
                         <div className="relative">
                           <CategoryFilter onSelectHandler={handleValue} />
                         </div>

@@ -1,17 +1,13 @@
-/* eslint-disable no-console */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
 // @ts-nocheck
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { useEffect } from 'react';
-import { getMealDataById } from '../selectors';
 import { loadMealDetails } from '../actions/index';
 import Loading from './Loading';
 import NotFoundPage from './NotFound';
 
 function MealData({
-  mealData, meal, loading, loadMealDetails, meals,
+  mealData, meal, loading, loadMealDetails,
 }) {
   useEffect(() => {
     loadMealDetails(meal.idMeal);
@@ -132,6 +128,19 @@ function MealData({
     </section>
   );
 }
+
+MealData.defaultProps = {
+  mealData: [],
+  meal: [],
+  loading: '',
+};
+
+MealData.propTypes = {
+  mealData: PropTypes.arrayOf(PropTypes.object),
+  meal: PropTypes.arrayOf(PropTypes.object),
+  loading: PropTypes.string,
+  loadMealDetails: PropTypes.func.isRequired,
+};
 
 const MapToState = (state, ownProps) => ({
   mealData: state.mealData.mealData.meals,

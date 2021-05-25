@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 // @ts-nocheck
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
